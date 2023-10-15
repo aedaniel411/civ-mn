@@ -1,0 +1,3 @@
+integer function cuadrado(n)
+    cuadrado = n**2
+end function
