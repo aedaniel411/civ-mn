@@ -1,5 +1,3 @@
-clear;
-
 A= [1 2 3 14; 3 5 2 19; 4 2 1 11];
 [ren, col] = size(A);
 
@@ -13,10 +11,10 @@ old = x;
 %Despejar veriables
 b = A(:, col);
 a = A(:, 1:col-1);
-err = 0.9;
+err = 0.01;
 e = 10000;
 
-for j = 1:10
+while (~(e < err))
     for p=1:ren 
         s = sum(a(p,:) .* x) - a(p,p) * x(p);
         x(p) = (b(p) - s) ./ a(p,p)  ;
@@ -24,6 +22,7 @@ for j = 1:10
     end
     e = sqrt(sum((x - old) .^ 2));
     old = x;
-    disp(x)
-    disp(e)
 end 
+
+disp(x)
+disp(e)
