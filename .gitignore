@@ -3,3 +3,24 @@
 
 octave-workspace
 .ipynb_checkpoints
+
+venv
+# Ignore the virtual environment directory
+*.pyc
+__pycache__
+*.pyo
+# Ignore Python bytecode files
+*.pyd
+# Ignore Python dynamic module files
+*.pdb
+# Ignore Python debug files
+*.egg-info
+# Ignore Python egg info directories
+*.eggs
+# Ignore Python egg files
+*.log
+# Ignore log files
+*.sqlite3
+# Ignore SQLite database files
+*.db
+# Ignore database files
